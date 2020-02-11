@@ -1,0 +1,112 @@
+@charset "UTF-8";
+/* ============================================
+FUENTES:
+    - Titulos: Poppins
+    - Párrafos: Source Sans Pro
+============================================ */
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&display=swap");
+/* ============================================
+ESTILOS GENERALES
+============================================ */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins';
+  color: #5a5a5a; }
+
+h2 {
+  font-size: 22px; }
+
+p, small, ul, li {
+  font-family: 'Source Sans Pro';
+  font-size: 18px;
+  color: #5a5a5a; }
+
+/* ============================================
+SECCIÓN CÓDIGO:
+    - Titulo <h2>
+    - Párrafo <p>
+    - Bloque de código (.__wrapper-codigo)
+============================================ */
+.__seccion-codigo .__wrapper-codigo {
+  min-height: 50px;
+  padding: 10px;
+  border-radius: 7px;
+  background: #282c34;
+  color: red;
+  font-size: 14px; }
+
+/* ============================================
+SECCIÓN TARJETAS PROFES:
+    - Wrapper de tarjeta individual (.)
+        - Imagen profe <img>
+        - Combo de texto (.__combo-texto)
+            - Nombre profe <h3>
+            - Bios <p> (desaparece en < 680px)
+            - Mail <small>
+============================================ */
+.__seccion-tarjetas .__wrapper-tarjeta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 1px solid #E6E6E6;
+  border-radius: 7px; }
+  .__seccion-tarjetas .__wrapper-tarjeta img {
+    border-radius: 7px 0 0 7px;
+    width: 30%; }
+  .__seccion-tarjetas .__wrapper-tarjeta .__combo-texto {
+    width: 70%;
+    padding: 20px 30px; }
+    .__seccion-tarjetas .__wrapper-tarjeta .__combo-texto h3 {
+      font-weight: normal;
+      margin-top: 0; }
+    .__seccion-tarjetas .__wrapper-tarjeta .__combo-texto p {
+      font-size: 16px; }
+    .__seccion-tarjetas .__wrapper-tarjeta .__combo-texto small {
+      font-size: 16px;
+      justify-self: flex-end; }
+
+@media (max-width: 680px) {
+  .__seccion-tarjetas .__wrapper-tarjeta .__combo-texto p {
+    display: none !important; } }
+
+/* ============================================
+SECCIÓN LISTADO DE CHECKS:
+    - Lista desordenada <ul>
+        - Items <li>
+============================================ */
+.__seccion-check ul {
+  -webkit-padding-start: 30px;
+  padding-inline-start: 30px;
+  list-style-type: none;
+  position: relative; }
+  .__seccion-check ul li::before {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    margin-top: -1px;
+    left: 0;
+    background-image: url("../img/checkmark-outline.svg");
+    background-size: 100%; }
+
+.__seccion-dos-columnas {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+  .__seccion-dos-columnas h2 {
+    width: 100%; }
+  .__seccion-dos-columnas div {
+    width: 47%; }
+    .__seccion-dos-columnas div h3 {
+      font-weight: normal;
+      margin: 0; }
+    .__seccion-dos-columnas div p {
+      margin-top: 8px; }
