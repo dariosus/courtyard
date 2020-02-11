@@ -7,6 +7,16 @@ FUENTES:
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&display=swap');
 
+// EMOJIS REFERENCE
+// http://www.unicode.org/emoji/charts/full-emoji-list.html
+
+/* ============================================
+FUENTES:
+    - Titulos: Poppins
+    - Párrafos: Source Sans Pro
+============================================ */
+
+
 
 /* ============================================
 ESTILOS GENERALES
@@ -27,6 +37,34 @@ p, small, ul, li {
     color: #5a5a5a
 }
 
+/* ============================================
+TITULOS CON EMOJI :)
+ - Obligatorio: fueguito
+============================================ */
+
+h2.__titulo {
+
+    // Obligatorio
+    &-fire {
+        color: orange;
+        &::before {
+            margin-right: 5px;
+            content: '\1f525';
+        }
+    }
+
+    // Video
+    &-movie-camera::before {
+        content: '\1F3AC';
+        margin-right: 5px;
+    }
+
+    // Código
+    &-rocket::before {
+        content: '\1F680';
+        margin-right: 5px
+    }
+}
 
 /* ============================================
 SECCIÓN CÓDIGO:
@@ -123,6 +161,16 @@ SECCIÓN LISTADO DE CHECKS:
     }
 }
 
+/* ============================================
+SECCIÓN DOS COLUMNAS:
+    - Columna izquierda <div>
+        - Título <h3>
+        - Párrafo <p>
+    - Columna derecha <div>
+        - Título <h3>
+        - Párrafo <p>
+============================================ */
+
 .__seccion-dos-columnas {
     display: flex;
     flex-wrap: wrap;
@@ -131,7 +179,7 @@ SECCIÓN LISTADO DE CHECKS:
     h2 {
         width: 100%;
     }
-    div {
+    .__columna {
         width: 47%;
         h3 {
             font-weight: normal;
@@ -139,6 +187,14 @@ SECCIÓN LISTADO DE CHECKS:
         }
         p {
             margin-top: 8px;
+        }
+    }
+}
+
+@media (max-width: 550px) {
+    .__seccion-dos-columnas {
+        div {
+            width: 100%;
         }
     }
 }

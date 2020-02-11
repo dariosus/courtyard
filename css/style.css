@@ -7,6 +7,11 @@ FUENTES:
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&display=swap");
 /* ============================================
+FUENTES:
+    - Titulos: Poppins
+    - Párrafos: Source Sans Pro
+============================================ */
+/* ============================================
 ESTILOS GENERALES
 ============================================ */
 h1, h2, h3, h4, h5, h6 {
@@ -20,6 +25,24 @@ p, small, ul, li {
   font-family: 'Source Sans Pro';
   font-size: 18px;
   color: #5a5a5a; }
+
+/* ============================================
+TITULOS CON EMOJI :)
+ - Obligatorio: fueguito
+============================================ */
+h2.__titulo-fire {
+  color: orange; }
+  h2.__titulo-fire::before {
+    margin-right: 5px;
+    content: '\1f525'; }
+
+h2.__titulo-movie-camera::before {
+  content: '\1F3AC';
+  margin-right: 5px; }
+
+h2.__titulo-rocket::before {
+  content: '\1F680';
+  margin-right: 5px; }
 
 /* ============================================
 SECCIÓN CÓDIGO:
@@ -92,6 +115,15 @@ SECCIÓN LISTADO DE CHECKS:
     background-image: url("../img/checkmark-outline.svg");
     background-size: 100%; }
 
+/* ============================================
+SECCIÓN DOS COLUMNAS:
+    - Columna izquierda <div>
+        - Título <h3>
+        - Párrafo <p>
+    - Columna derecha <div>
+        - Título <h3>
+        - Párrafo <p>
+============================================ */
 .__seccion-dos-columnas {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -103,10 +135,14 @@ SECCIÓN LISTADO DE CHECKS:
   justify-content: space-between; }
   .__seccion-dos-columnas h2 {
     width: 100%; }
-  .__seccion-dos-columnas div {
+  .__seccion-dos-columnas .__columna {
     width: 47%; }
-    .__seccion-dos-columnas div h3 {
+    .__seccion-dos-columnas .__columna h3 {
       font-weight: normal;
       margin: 0; }
-    .__seccion-dos-columnas div p {
+    .__seccion-dos-columnas .__columna p {
       margin-top: 8px; }
+
+@media (max-width: 550px) {
+  .__seccion-dos-columnas div {
+    width: 100%; } }
