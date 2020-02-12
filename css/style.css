@@ -1,16 +1,17 @@
 @charset "UTF-8";
 /* ============================================
-FUENTES:
+VARIABLES
+============================================ */
+/* ============================================
+MIXINS
+============================================ */
+/* ============================================
+FUENTES
     - Titulos: Poppins
     - Párrafos: Source Sans Pro
 ============================================ */
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&display=swap");
-/* ============================================
-FUENTES:
-    - Titulos: Poppins
-    - Párrafos: Source Sans Pro
-============================================ */
 /* ============================================
 ESTILOS GENERALES
 ============================================ */
@@ -28,24 +29,28 @@ p, small, ul, li {
 
 /* ============================================
 TITULOS CON EMOJI :)
- - Obligatorio: fueguito
+http://www.unicode.org/emoji/charts/full-emoji-list.html
 ============================================ */
-h2.__titulo-fire {
+h2.__emoji.__fire {
   color: orange; }
-  h2.__titulo-fire::before {
+  h2.__emoji.__fire::before {
     margin-right: 5px;
-    content: '\1f525'; }
+    content: "🔥"; }
 
-h2.__titulo-movie-camera::before {
-  content: '\1F3AC';
-  margin-right: 5px; }
+h2.__emoji.__movie-camera {
+  color: #5a5a5a; }
+  h2.__emoji.__movie-camera::before {
+    margin-right: 5px;
+    content: "🎬"; }
 
-h2.__titulo-rocket::before {
-  content: '\1F680';
-  margin-right: 5px; }
+h2.__emoji.__rocket {
+  color: #5a5a5a; }
+  h2.__emoji.__rocket::before {
+    margin-right: 5px;
+    content: "🚀"; }
 
 /* ============================================
-SECCIÓN CÓDIGO:
+SECCIÓN CÓDIGO
     - Titulo <h2>
     - Párrafo <p>
     - Bloque de código (.__wrapper-codigo)
@@ -55,11 +60,10 @@ SECCIÓN CÓDIGO:
   padding: 10px;
   border-radius: 7px;
   background: #282c34;
-  color: red;
   font-size: 14px; }
 
 /* ============================================
-SECCIÓN TARJETAS PROFES:
+SECCIÓN TARJETAS PROFES
     - Wrapper de tarjeta individual (.)
         - Imagen profe <img>
         - Combo de texto (.__combo-texto)
@@ -96,7 +100,7 @@ SECCIÓN TARJETAS PROFES:
     display: none !important; } }
 
 /* ============================================
-SECCIÓN LISTADO DE CHECKS:
+SECCIÓN LISTADO DE CHECKS
     - Lista desordenada <ul>
         - Items <li>
 ============================================ */
@@ -116,7 +120,7 @@ SECCIÓN LISTADO DE CHECKS:
     background-size: 100%; }
 
 /* ============================================
-SECCIÓN DOS COLUMNAS:
+SECCIÓN DOS COLUMNAS
     - Columna izquierda <div>
         - Título <h3>
         - Párrafo <p>
@@ -146,3 +150,72 @@ SECCIÓN DOS COLUMNAS:
 @media (max-width: 550px) {
   .__seccion-dos-columnas div {
     width: 100%; } }
+
+/* ============================================
+QUOTES
+============================================ */
+.__quote {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  border-radius: 7px;
+  padding: 25px;
+  margin-bottom: 25px; }
+  .__quote p {
+    width: 85%;
+    color: #fff;
+    font-size: 16px; }
+  .__quote.__alerta {
+    background-color: red; }
+    .__quote.__alerta::before {
+      content: '';
+      opacity: .5;
+      display: block;
+      width: 15%;
+      min-height: 70px;
+      margin-right: 25px;
+      background-image: url("../img/icon-alert.svg");
+      background-position: center center;
+      background-repeat: no-repeat; }
+  .__quote.__ok {
+    background-color: green; }
+    .__quote.__ok::before {
+      content: '';
+      opacity: .5;
+      display: block;
+      width: 15%;
+      min-height: 70px;
+      margin-right: 25px;
+      background-image: url("../img/icon-check.svg");
+      background-position: center center;
+      background-repeat: no-repeat; }
+  .__quote.__cita {
+    background-color: blueviolet; }
+    .__quote.__cita::before {
+      content: '';
+      opacity: .5;
+      display: block;
+      width: 15%;
+      min-height: 70px;
+      margin-right: 25px;
+      background-image: url("../img/icon-quotes.svg");
+      background-position: center center;
+      background-repeat: no-repeat; }
+  .__quote.__info {
+    background-color: blue; }
+    .__quote.__info::before {
+      content: '';
+      opacity: .5;
+      display: block;
+      width: 15%;
+      min-height: 70px;
+      margin-right: 25px;
+      background-image: url("../img/icon-info.svg");
+      background-position: center center;
+      background-repeat: no-repeat; }

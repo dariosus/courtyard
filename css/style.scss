@@ -1,5 +1,47 @@
 /* ============================================
-FUENTES:
+VARIABLES
+============================================ */
+
+$bgCodigo: #282c34;
+
+$colorGeneral: #5a5a5a;
+$colorAlerta: orange;
+$colorOK: green;
+$colorInfo: blue;
+$colorQuote: blueviolet;
+
+
+/* ============================================
+MIXINS
+============================================ */
+
+@mixin configQuote($color, $image) {
+    background-color: $color;
+        
+        &::before {
+            content: '';
+            opacity: .5;
+            display: block;
+            width: 15%;
+            min-height: 70px;
+            margin-right: 25px;
+            background-image: url('../img/#{$image}.svg');
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+}
+
+@mixin emojiTitles($unicode, $color: $colorGeneral) {
+    color: $color;
+
+        &::before {
+            margin-right: 5px;
+            content: '#{$unicode}';
+        }
+}
+  
+/* ============================================
+FUENTES
     - Titulos: Poppins
     - Párrafos: Source Sans Pro
 ============================================ */
@@ -7,24 +49,13 @@ FUENTES:
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&display=swap');
 
-// EMOJIS REFERENCE
-// http://www.unicode.org/emoji/charts/full-emoji-list.html
-
-/* ============================================
-FUENTES:
-    - Titulos: Poppins
-    - Párrafos: Source Sans Pro
-============================================ */
-
-
-
 /* ============================================
 ESTILOS GENERALES
 ============================================ */
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Poppins';
-    color: #5a5a5a
+    color: $colorGeneral
 }
 
 h2 {
@@ -34,40 +65,23 @@ h2 {
 p, small, ul, li {
     font-family: 'Source Sans Pro';
     font-size: 18px;
-    color: #5a5a5a
+    color: $colorGeneral
 }
 
 /* ============================================
 TITULOS CON EMOJI :)
- - Obligatorio: fueguito
+http://www.unicode.org/emoji/charts/full-emoji-list.html
 ============================================ */
 
-h2.__titulo {
+h2.__emoji {
 
-    // Obligatorio
-    &-fire {
-        color: orange;
-        &::before {
-            margin-right: 5px;
-            content: '\1f525';
-        }
-    }
-
-    // Video
-    &-movie-camera::before {
-        content: '\1F3AC';
-        margin-right: 5px;
-    }
-
-    // Código
-    &-rocket::before {
-        content: '\1F680';
-        margin-right: 5px
-    }
+    &.__fire { @include emojiTitles('\1F525', $colorAlerta) }
+    &.__movie-camera { @include emojiTitles('\1F3AC') }
+    &.__rocket { @include emojiTitles('\1F680') }
 }
 
 /* ============================================
-SECCIÓN CÓDIGO:
+SECCIÓN CÓDIGO
     - Titulo <h2>
     - Párrafo <p>
     - Bloque de código (.__wrapper-codigo)
@@ -79,13 +93,12 @@ SECCIÓN CÓDIGO:
         padding: 10px;
         border-radius: 7px;
         background: #282c34;
-        color: red;
         font-size:14px
     }   
 }
 
 /* ============================================
-SECCIÓN TARJETAS PROFES:
+SECCIÓN TARJETAS PROFES
     - Wrapper de tarjeta individual (.)
         - Imagen profe <img>
         - Combo de texto (.__combo-texto)
@@ -136,7 +149,7 @@ SECCIÓN TARJETAS PROFES:
 }
 
 /* ============================================
-SECCIÓN LISTADO DE CHECKS:
+SECCIÓN LISTADO DE CHECKS
     - Lista desordenada <ul>
         - Items <li>
 ============================================ */
@@ -162,7 +175,7 @@ SECCIÓN LISTADO DE CHECKS:
 }
 
 /* ============================================
-SECCIÓN DOS COLUMNAS:
+SECCIÓN DOS COLUMNAS
     - Columna izquierda <div>
         - Título <h3>
         - Párrafo <p>
@@ -197,4 +210,28 @@ SECCIÓN DOS COLUMNAS:
             width: 100%;
         }
     }
+}
+
+/* ============================================
+QUOTES
+============================================ */
+
+.__quote {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 7px;
+    padding: 25px;
+    margin-bottom: 25px;
+    
+    p {
+        width: 85%;
+        color: #fff;
+        font-size: 16px
+    }
+
+    &.__alerta { @include configQuote(red, 'icon-alert') }
+    &.__ok { @include configQuote(green, 'icon-check') }
+    &.__cita { @include configQuote(blueviolet, 'icon-quotes') }
+    &.__info { @include configQuote(blue, 'icon-info') }
 }
