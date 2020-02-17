@@ -17,37 +17,49 @@ ESTILOS GENERALES
 ============================================ */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Poppins';
-  color: #5a5a5a; }
+  color: #5a5a5a;
+}
 
 h2 {
-  font-size: 22px; }
+  font-size: 22px;
+}
 
 p, small, ul, li {
   font-family: 'Source Sans Pro';
   font-size: 18px;
-  color: #5a5a5a; }
+  color: #5a5a5a;
+}
 
 /* ============================================
 TITULOS CON EMOJI :)
 http://www.unicode.org/emoji/charts/full-emoji-list.html
 ============================================ */
 h2.__emoji.__fire {
-  color: orange; }
-  h2.__emoji.__fire::before {
-    margin-right: 5px;
-    content: "🔥"; }
+  color: orange;
+}
+
+h2.__emoji.__fire::before {
+  margin-right: 5px;
+  content: "🔥";
+}
 
 h2.__emoji.__movie-camera {
-  color: #5a5a5a; }
-  h2.__emoji.__movie-camera::before {
-    margin-right: 5px;
-    content: "🎬"; }
+  color: #5a5a5a;
+}
+
+h2.__emoji.__movie-camera::before {
+  margin-right: 5px;
+  content: "🎬";
+}
 
 h2.__emoji.__rocket {
-  color: #5a5a5a; }
-  h2.__emoji.__rocket::before {
-    margin-right: 5px;
-    content: "🚀"; }
+  color: #5a5a5a;
+}
+
+h2.__emoji.__rocket::before {
+  margin-right: 5px;
+  content: "🚀";
+}
 
 /* ============================================
 SECCIÓN CÓDIGO
@@ -60,7 +72,8 @@ SECCIÓN CÓDIGO
   padding: 10px;
   border-radius: 7px;
   background: #282c34;
-  font-size: 14px; }
+  font-size: 14px;
+}
 
 /* ============================================
 SECCIÓN TARJETAS PROFES
@@ -76,28 +89,50 @@ SECCIÓN TARJETAS PROFES
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   border: 1px solid #E6E6E6;
-  border-radius: 7px; }
-  .__seccion-tarjetas .__wrapper-tarjeta img {
-    border-radius: 7px 0 0 7px;
-    width: 30%; }
-  .__seccion-tarjetas .__wrapper-tarjeta .__combo-texto {
-    width: 70%;
-    padding: 20px 30px; }
-    .__seccion-tarjetas .__wrapper-tarjeta .__combo-texto h3 {
-      font-weight: normal;
-      margin-top: 0; }
-    .__seccion-tarjetas .__wrapper-tarjeta .__combo-texto p {
-      font-size: 16px; }
-    .__seccion-tarjetas .__wrapper-tarjeta .__combo-texto small {
-      font-size: 16px;
-      justify-self: flex-end; }
+  border-radius: 7px;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+
+.__seccion-tarjetas .__wrapper-tarjeta img {
+  border-radius: 7px 0 0 7px;
+  width: 30%;
+}
+
+.__seccion-tarjetas .__wrapper-tarjeta .__combo-texto {
+  width: 70%;
+  padding: 20px 30px;
+}
+
+.__seccion-tarjetas .__wrapper-tarjeta .__combo-texto h3 {
+  font-weight: normal;
+  margin-top: 0;
+}
+
+.__seccion-tarjetas .__wrapper-tarjeta .__combo-texto p {
+  font-size: 16px;
+}
+
+.__seccion-tarjetas .__wrapper-tarjeta .__combo-texto small {
+  font-size: 16px;
+  justify-self: flex-end;
+}
+
+.__seccion-tarjetas .__wrapper-tarjeta:hover {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.14), 0 6px 6px rgba(0, 0, 0, 0.18);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.14), 0 6px 6px rgba(0, 0, 0, 0.18);
+}
 
 @media (max-width: 680px) {
   .__seccion-tarjetas .__wrapper-tarjeta .__combo-texto p {
-    display: none !important; } }
+    display: none !important;
+  }
+}
 
 /* ============================================
 SECCIÓN LISTADO DE CHECKS
@@ -106,18 +141,21 @@ SECCIÓN LISTADO DE CHECKS
 ============================================ */
 .__seccion-check ul {
   -webkit-padding-start: 30px;
-  padding-inline-start: 30px;
+          padding-inline-start: 30px;
   list-style-type: none;
-  position: relative; }
-  .__seccion-check ul li::before {
-    content: '';
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    margin-top: -1px;
-    left: 0;
-    background-image: url("../img/checkmark-outline.svg");
-    background-size: 100%; }
+  position: relative;
+}
+
+.__seccion-check ul li::before {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  margin-top: -1px;
+  left: 0;
+  background-image: url("../img/checkmark-outline.svg");
+  background-size: 100%;
+}
 
 /* ============================================
 SECCIÓN DOS COLUMNAS
@@ -133,23 +171,34 @@ SECCIÓN DOS COLUMNAS
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between; }
-  .__seccion-dos-columnas h2 {
-    width: 100%; }
-  .__seccion-dos-columnas .__columna {
-    width: 47%; }
-    .__seccion-dos-columnas .__columna h3 {
-      font-weight: normal;
-      margin: 0; }
-    .__seccion-dos-columnas .__columna p {
-      margin-top: 8px; }
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.__seccion-dos-columnas h2 {
+  width: 100%;
+}
+
+.__seccion-dos-columnas .__columna {
+  width: 47%;
+}
+
+.__seccion-dos-columnas .__columna h3 {
+  font-weight: normal;
+  margin: 0;
+}
+
+.__seccion-dos-columnas .__columna p {
+  margin-top: 8px;
+}
 
 @media (max-width: 550px) {
-  .__seccion-dos-columnas div {
-    width: 100%; } }
+  .__seccion-dos-columnas .__columna {
+    width: 100%;
+  }
+}
 
 /* ============================================
 QUOTES
@@ -159,63 +208,98 @@ QUOTES
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   border-radius: 7px;
   padding: 25px;
-  margin-bottom: 25px; }
+  margin-bottom: 25px;
+}
+
+.__quote p {
+  width: 85%;
+  color: #fff;
+  font-size: 16px;
+}
+
+.__quote.__alerta {
+  background-color: red;
+}
+
+.__quote.__alerta::before {
+  content: '';
+  opacity: .5;
+  display: block;
+  width: 15%;
+  min-height: 70px;
+  margin-right: 25px;
+  background-image: url("../img/icon-alert.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.__quote.__ok {
+  background-color: green;
+}
+
+.__quote.__ok::before {
+  content: '';
+  opacity: .5;
+  display: block;
+  width: 15%;
+  min-height: 70px;
+  margin-right: 25px;
+  background-image: url("../img/icon-check.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.__quote.__cita {
+  background-color: blueviolet;
+}
+
+.__quote.__cita::before {
+  content: '';
+  opacity: .5;
+  display: block;
+  width: 15%;
+  min-height: 70px;
+  margin-right: 25px;
+  background-image: url("../img/icon-quotes.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.__quote.__info {
+  background-color: blue;
+}
+
+.__quote.__info::before {
+  content: '';
+  opacity: .5;
+  display: block;
+  width: 15%;
+  min-height: 70px;
+  margin-right: 25px;
+  background-image: url("../img/icon-info.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 550px) {
+  .__quote {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
   .__quote p {
-    width: 85%;
-    color: #fff;
-    font-size: 16px; }
-  .__quote.__alerta {
-    background-color: red; }
-    .__quote.__alerta::before {
-      content: '';
-      opacity: .5;
-      display: block;
-      width: 15%;
-      min-height: 70px;
-      margin-right: 25px;
-      background-image: url("../img/icon-alert.svg");
-      background-position: center center;
-      background-repeat: no-repeat; }
-  .__quote.__ok {
-    background-color: green; }
-    .__quote.__ok::before {
-      content: '';
-      opacity: .5;
-      display: block;
-      width: 15%;
-      min-height: 70px;
-      margin-right: 25px;
-      background-image: url("../img/icon-check.svg");
-      background-position: center center;
-      background-repeat: no-repeat; }
-  .__quote.__cita {
-    background-color: blueviolet; }
-    .__quote.__cita::before {
-      content: '';
-      opacity: .5;
-      display: block;
-      width: 15%;
-      min-height: 70px;
-      margin-right: 25px;
-      background-image: url("../img/icon-quotes.svg");
-      background-position: center center;
-      background-repeat: no-repeat; }
-  .__quote.__info {
-    background-color: blue; }
-    .__quote.__info::before {
-      content: '';
-      opacity: .5;
-      display: block;
-      width: 15%;
-      min-height: 70px;
-      margin-right: 25px;
-      background-image: url("../img/icon-info.svg");
-      background-position: center center;
-      background-repeat: no-repeat; }
+    margin-bottom: 0;
+  }
+}
+/*# sourceMappingURL=style.css.map */

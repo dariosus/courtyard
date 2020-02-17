@@ -113,6 +113,7 @@ SECCIÓN TARJETAS PROFES
         align-items: center;
         border: 1px solid #E6E6E6;
         border-radius: 7px;
+        transition: all 0.25s ease-in-out;
 
         img {
             border-radius: 7px 0 0 7px;
@@ -132,6 +133,13 @@ SECCIÓN TARJETAS PROFES
                 font-size: 16px;
                 justify-self: flex-end;
             }
+        }
+
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow:
+                0 10px 20px rgba(0,0,0,0.14),
+                0 6px 6px rgba(0,0,0,0.18);
         }
     }
 }
@@ -206,7 +214,7 @@ SECCIÓN DOS COLUMNAS
 
 @media (max-width: 550px) {
     .__seccion-dos-columnas {
-        div {
+        .__columna {
             width: 100%;
         }
     }
@@ -234,4 +242,15 @@ QUOTES
     &.__ok { @include configQuote(green, 'icon-check') }
     &.__cita { @include configQuote(blueviolet, 'icon-quotes') }
     &.__info { @include configQuote(blue, 'icon-info') }
+}
+
+@media (max-width: 550px) {
+    .__quote {
+        align-items: flex-start;
+        flex-direction: column;
+
+        p {
+            margin-bottom: 0;
+        }
+    }
 }
