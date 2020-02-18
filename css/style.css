@@ -40,6 +40,10 @@ p, small, ul, li {
   color: #5a5a5a;
 }
 
+ul li {
+  margin-bottom: 5px;
+}
+
 /* ============================================
 TITULOS CON EMOJI :)
 http://www.unicode.org/emoji/charts/full-emoji-list.html
@@ -105,6 +109,10 @@ SECCIÓN TARJETAS PROFES
   border-radius: 7px;
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
+}
+
+.__seccion-tarjetas .__wrapper-tarjeta + .__wrapper-tarjeta {
+  margin-top: 25px;
 }
 
 .__seccion-tarjetas .__wrapper-tarjeta img {
