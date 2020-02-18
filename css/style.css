@@ -36,7 +36,8 @@ p {
 
 p, small, ul, li {
   font-family: 'Source Sans Pro';
-  font-size: 18px !important;
+  font-size: 16.5px !important;
+  line-height: 1.4em;
   color: #5a5a5a;
 }
 
@@ -52,31 +53,103 @@ ul li {
 TITULOS CON EMOJI :)
 http://www.unicode.org/emoji/charts/full-emoji-list.html
 ============================================ */
-h2.__emoji.__fire {
+.__h2.__emoji.__fire {
   color: orange;
 }
 
-h2.__emoji.__fire::before {
+.__h2.__emoji.__fire::before {
   margin-right: 5px;
   content: "🔥";
 }
 
-h2.__emoji.__movie-camera {
+.__h2.__emoji.__movie-camera {
   color: #5a5a5a;
 }
 
-h2.__emoji.__movie-camera::before {
+.__h2.__emoji.__movie-camera::before {
   margin-right: 5px;
   content: "🎬";
 }
 
-h2.__emoji.__rocket {
+.__h2.__emoji.__rocket {
   color: #5a5a5a;
 }
 
-h2.__emoji.__rocket::before {
+.__h2.__emoji.__rocket::before {
   margin-right: 5px;
   content: "🚀";
+}
+
+.__h2.__emoji.__pushpin {
+  color: #5a5a5a;
+}
+
+.__h2.__emoji.__pushpin::before {
+  margin-right: 5px;
+  content: "📌";
+}
+
+.__h2.__emoji.__clapper-board {
+  color: #5a5a5a;
+}
+
+.__h2.__emoji.__clapper-board::before {
+  margin-right: 5px;
+  content: "🎬";
+}
+
+.__h2.__emoji.__laptop {
+  color: #5a5a5a;
+}
+
+.__h2.__emoji.__laptop::before {
+  margin-right: 5px;
+  content: "💻";
+}
+
+.__h2.__emoji.__light-bulb {
+  color: #5a5a5a;
+}
+
+.__h2.__emoji.__light-bulb::before {
+  margin-right: 5px;
+  content: "💡";
+}
+
+.__h2.__emoji.__compass {
+  color: #5a5a5a;
+}
+
+.__h2.__emoji.__compass::before {
+  margin-right: 5px;
+  content: "🧭";
+}
+
+.__h2.__emoji.__last-track-button {
+  color: #5a5a5a;
+}
+
+.__h2.__emoji.__last-track-button::before {
+  margin-right: 5px;
+  content: "⏮";
+}
+
+.__h2.__emoji.__thinking-face {
+  color: #5a5a5a;
+}
+
+.__h2.__emoji.__thinking-face::before {
+  margin-right: 5px;
+  content: "🤔";
+}
+
+.__h2.__emoji.__thumbs-up {
+  color: #5a5a5a;
+}
+
+.__h2.__emoji.__thumbs-up::before {
+  margin-right: 5px;
+  content: "👍";
 }
 
 /* ============================================
@@ -204,6 +277,11 @@ SECCIÓN DOS COLUMNAS
   width: 100%;
 }
 
+.__seccion-dos-columnas .__d-block-100 {
+  display: block;
+  width: 100%;
+}
+
 .__seccion-dos-columnas .__columna {
   width: 47%;
 }
@@ -217,7 +295,7 @@ SECCIÓN DOS COLUMNAS
   margin-top: 8px;
 }
 
-@media (max-width: 550px) {
+@media (max-width: 700px) {
   .__seccion-dos-columnas .__columna {
     width: 100%;
   }
@@ -245,6 +323,7 @@ QUOTES
   width: 85%;
   color: #fff;
   font-size: 16px;
+  font-weight: 500;
 }
 
 .__quote.__alerta {

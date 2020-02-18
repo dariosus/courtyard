@@ -74,7 +74,8 @@ p {
 
 p, small, ul, li {
     font-family: 'Source Sans Pro';
-    font-size: 18px!important;
+    font-size: 16.5px!important;
+    line-height: 1.4em;
     color: $colorGeneral
 }
 
@@ -93,11 +94,20 @@ TITULOS CON EMOJI :)
 http://www.unicode.org/emoji/charts/full-emoji-list.html
 ============================================ */
 
-h2.__emoji {
+.__h2.__emoji {
 
     &.__fire { @include emojiTitles('\1F525', $colorAlerta) }
     &.__movie-camera { @include emojiTitles('\1F3AC') }
     &.__rocket { @include emojiTitles('\1F680') }
+    &.__pushpin { @include emojiTitles('\1F4CC') }
+    &.__clapper-board { @include emojiTitles('\1F3AC') }
+    &.__laptop { @include emojiTitles('\1F4BB') }
+    &.__light-bulb { @include emojiTitles('\1F4A1') }
+    &.__compass { @include emojiTitles('\1F9ED') }
+    &.__last-track-button { @include emojiTitles('\23EE') }
+    &.__thinking-face { @include emojiTitles('\1F914') }
+    &.__thumbs-up { @include emojiTitles('\1F44D') }
+
 }
 
 /* ============================================
@@ -225,6 +235,12 @@ SECCIÓN DOS COLUMNAS
         display: block;
         width: 100%;
     }
+
+    .__d-block-100 {
+        display: block;
+        width: 100%;
+    }
+
     .__columna {
         width: 47%;
         .__h3 {
@@ -237,7 +253,7 @@ SECCIÓN DOS COLUMNAS
     }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 700px) {
     .__seccion-dos-columnas {
         .__columna {
             width: 100%;
@@ -260,7 +276,8 @@ QUOTES
     p {
         width: 85%;
         color: #fff;
-        font-size: 16px
+        font-size: 16px;
+        font-weight: 500;
     }
 
     &.__alerta { @include configQuote(red, 'icon-alert') }
