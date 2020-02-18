@@ -189,6 +189,7 @@ SECCIÓN DOS COLUMNAS
 
 .__seccion-dos-columnas .__h2 {
   display: block;
+  width: 100%;
 }
 
 .__seccion-dos-columnas .__columna {
