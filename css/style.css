@@ -30,6 +30,10 @@ h1, h2, h3, h4, h5, h6, .__h2, .__h3 {
   font-size: 18.5px !important;
 }
 
+p {
+  margin-bottom: 18px !important;
+}
+
 p, small, ul, li {
   font-family: 'Source Sans Pro';
   font-size: 18px !important;
