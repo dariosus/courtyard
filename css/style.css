@@ -17,6 +17,7 @@ ESTILOS GENERALES
 ============================================ */
 h1, h2, h3, h4, h5, h6, .__h2, .__h3 {
   font-family: 'Poppins';
+  font-weight: bold;
   color: #5a5a5a;
 }
 
