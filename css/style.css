@@ -184,7 +184,7 @@ SECCIÓN DOS COLUMNAS
 }
 
 .__seccion-dos-columnas .__h2 {
-  width: 100%;
+  display: block;
 }
 
 .__seccion-dos-columnas .__columna {
