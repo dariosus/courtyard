@@ -23,7 +23,7 @@ h1, h2, h3, h4, h5, h6, .__h2, .__h3 {
 .__h2 {
   font-weight: bold;
   font-size: 22px !important;
-  margin: 18px 0 !important;
+  margin: 19px 0 !important;
 }
 
 .__h3 {
@@ -42,6 +42,10 @@ p, small, ul, li {
 
 ul li {
   margin-bottom: 5px;
+}
+
+[class^="__seccion"] {
+  margin-bottom: 20px;
 }
 
 /* ============================================
