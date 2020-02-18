@@ -55,11 +55,11 @@ ESTILOS GENERALES
 
 h1, h2, h3, h4, h5, h6, .__h2, .__h3 {
     font-family: 'Poppins';
-    font-weight: bold;
     color: $colorGeneral;
 }
 
 .__h2 {
+    font-weight: bold;
     font-size: 22px!important;
     margin: 18px 0!important;
 }
@@ -128,7 +128,7 @@ SECCIÓN TARJETAS PROFES
         .__combo-texto {
             width: 70%;
             padding: 20px 30px;
-            h3 {
+            .__h3 {
                 font-weight: normal;
                 margin-top: 0;
             }
@@ -203,12 +203,12 @@ SECCIÓN DOS COLUMNAS
     flex-wrap: wrap;
     justify-content: space-between;
 
-    h2 {
+    .__h2 {
         width: 100%;
     }
     .__columna {
         width: 47%;
-        h3 {
+        .__h3 {
             font-weight: normal;
             margin: 0;
         }
