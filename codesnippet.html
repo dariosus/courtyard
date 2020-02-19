@@ -2,7 +2,8 @@
 
 <style>
     h1, h2, h5, h4, h5, h6, legend { font-family: Arial, Helvetica, sans-serif; }
-    h5 {margin-bottom: 0;}
+    h5 { margin-bottom: 0 }
+    fieldset { margin-bottom: 30px }
 </style>
 
 <h1>Bienvenida</h1>
@@ -56,8 +57,244 @@ const NUMERO_PI = 3.1416;
 </fieldset>
 
 <fieldset>
-    <legend>Tipos de datos</legend>
-    
+<legend>Tipos de datos</legend>
+<h5>Una variable de cada tipo</h5>
+<pre><code class="language-javascript">
+/* ==========================
+CADENA DE CARACTERES (STRING)
+========================== */
+
+// Número entero
+var edad = 35;
+
+// Número con decimales
+var precio = 150.65
+
+/* ==========================
+CADENA DE CARACTERES (STRING)
+========================== */
+
+// Con comillas simples
+var nombre = 'Mamá Luchetti';
+
+// Con comillas dobles obtenemos el mismo resultado
+var ocupacion = "Master of the sopas";
+
+/* ==========================
+LÓGICOS O BOOLEANOS
+========================== */
+
+var laClaseEstaReCopada = true;
+var laClaseQueVieneHayAsado = false;
+        
+</code></pre>
+
+<h5>Usando Number()</h5>
+<pre><code class="language-javascript">
+var unNuevoNumero = Number('50');
+        
+</code></pre>
+
+<h5>Usando parseInt()</h5>
+<pre><code class="language-javascript">
+// En esta variable debería quedar guardado solo el número 10
+var numeroRedondeado = parseInt("10.59");
+
+// En esta variable debería quedar guardado solo el número 51
+var numeroRedondeado = parseInt("51.598597");
+        
+</code></pre>
+
+</fieldset>
+
+<fieldset>
+<legend>Objetos literales</legend>
+
+<h5>Estructura de un objeto literal</h5>
+<pre><code class="language-javascript">
+var tenista = {
+    nombre: 'Roger',
+    apellido: 'Federer',
+    edad: 38
+}
+       
+</code></pre>
+
+<h5>Métodos de un objeto</h5>
+<pre><code class="language-javascript">
+var tenista = {
+    nombre: 'Roger',
+    apellido: 'Federer',
+    edad: 38,
+    // Método saludar
+    saludar: function() {
+        return "¡Hola! Mi nombre es Roger";
+    }
+}
+       
+</code></pre>
+
+<h5>Trabajando dentro del objeto</h5>
+<pre><code class="language-javascript">
+var tenista = {
+    nombre: 'Roger',
+    apellido: 'Federer',
+    edad: 38,
+    saludar: function() {
+        // Accedemos a la propiedad "nombre" de ESTE objeto con la palabra reservada THIS
+        return "¡Hola! Mi nombre es " + this.nombre;
+    }
+}
+       
+</code></pre>
+
+<h5>Construir un objeto</h5>
+<pre><code class="language-javascript">
+function Auto(marca, modelo) {
+    this.marca = marca;
+    this.modelo = modelo;
+};
+       
+</code></pre>
+
+<h5>Instanciar un objeto</h5>
+<pre><code class="language-javascript">
+var miAuto = new Auto('Volkswagen', 'Gol');
+       
+</code></pre>
+
+</fieldset>
+
+<fieldset>
+<legend>Operadores</legend>
+
+<h5>Instanciar un objeto</h5>
+<pre><code class="language-javascript">
+/* ==========================
+DE ASIGNACIÓN
+========================== */
+
+// El operador "=" sirve para asignar el valor 40 a una variable llamada "edad"
+
+var edad = 40
+
+/* ==========================
+ARITMÉTICOS
+========================== */
+
+// Nos permiten hace operaciones matemáticas
+
+10 + 15 //---> Suma
+10 - 15 //---> Resta
+10 * 15 //---> Multiplicación
+10 / 15 //---> División
+15++    //---> Incremento de uno en uno: 15 + 1
+15--    //---> Decremento de uno en uno: 15 - 1
+15 % 5  //---> Módulo. El resto obtenido de dividir 15 entre 5: 0
+15 % 2  //---> Módulo. El resto obtenido de dividir 15 entre 2: 1
+
+/* ==========================
+DE COMPARACIÓN SIMPLE
+========================== */
+
+10 == 15 //---> Igualdad
+10 != 15 //---> Desigualdad
+
+/* ==========================
+DE COMPARACIÓN ESTRICTA
+========================== */
+
+10 === 15 //---> Estrictamente igual (mismo valor y tipo de dato)
+10 !== 15 //---> Compara si los operandos no son iguales y/o no del mismo tipo
+
+/* ==========================
+OPERADORES RELACIONALES
+========================== */
+
+15 > 10  //---> Mayor que...
+15 >= 10  //---> Mayor igual que...
+15 < 10  //---> Menor que...
+15 < 10  //---> Mayor igual que...
+
+/* ==========================
+LÓGICOS
+========================== */
+
+// Permiten combinar valores booleanos y su resultado a la vez también es un booleano
+
+// && Todos sus valores deben evaluar como TRUE
+(10 > 15) && (10 != 20) //---> 
+
+
+</code></pre>
+</fieldset>
+
+<fieldset>
+<legend>Condicionales: IF</legend>
+
+<h5>Tipos de condicionales</h5>
+<pre><code class="language-javascript">
+/* ==========================
+CONDICIONAL SIMPLE
+========================== */
+
+if(condicion) {
+    // código a ejecutar si la condición es verdadera
+}
+
+/* ==========================
+CONDICIONAL CON BLOQUE "ELSE"
+========================== */
+
+if(condicion) {
+    // código a ejecutar si la condición es verdadera
+} else {
+    // código a ejecutar si la condición es falsa
+}
+
+/* ==========================
+CONDICIONAL CON BLOQUE "ELSE IF"
+========================== */
+
+if(condicion) {
+    // código a ejecutar si la condición es verdadera
+} else if (otra condicion) {
+    // código a ejecutar si esta otra condicion es verdadera
+} else {
+    // código a ejecutar si todas las condiciones fueron falsas
+}
+       
+</code></pre>
+
+</fieldset>
+
+<fieldset>
+<legend>Ciclos: For</legend>
+<h5>Estructura básica</h5>
+<pre><code class="language-javascript">
+for(inicio, condicion, modificador) {
+    // Código que se ejecutará en cada repetición
+}
+
+</code></pre>
+</fieldset>
+
+<fieldset>
+<legend>El while y do while</legend>
+<h5>Estructura de un while</h5>
+<pre><code class="language-javascript">
+while(condicion) {
+    // Bloque de código que se ejecuta
+    // Si la condición es verdadera
+}
+
+do {
+    // Bloque de código que se ejecuta al menos una vez
+    // y cada vuelta si la condicion es verdadera
+} while ()
+
+</code></pre>
+
 </fieldset>
 
 
