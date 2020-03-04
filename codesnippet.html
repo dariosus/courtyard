@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="css/atom-one-dark.css">
 
 <style>
-    h1, h2, h5, h4, h5, h6, legend { font-family: Arial, Helvetica, sans-serif; }
+    h1, h2, h3, h5, h4, h5, h6, legend { font-family: Arial, Helvetica, sans-serif; }
     h5 { margin-bottom: 0 }
     fieldset { margin-bottom: 30px }
 </style>
@@ -21,9 +21,9 @@ console.log("Bienvenidos a Digital House!")
 </fieldset>
 
 <h1>JS101</h1>
-
+<h3>Repaso general, Objetos Literales y Estructuras de control</h3>
 <fieldset>
-<legend>Repaso general, Objetos Literales y Estructuras de control</legend>
+<legend>Variables</legend>
 <h5>Asignando valores a las variables</h5>
 <pre><code class="language-javascript">
 var nombre;
@@ -184,37 +184,37 @@ ARITMÉTICOS
 
 // Nos permiten hace operaciones matemáticas
 
-10 + 15 //---> Suma
-10 - 15 //---> Resta
-10 * 15 //---> Multiplicación
-10 / 15 //---> División
-15++    //---> Incremento de uno en uno: 15 + 1
-15--    //---> Decremento de uno en uno: 15 - 1
-15 % 5  //---> Módulo. El resto obtenido de dividir 15 entre 5: 0
-15 % 2  //---> Módulo. El resto obtenido de dividir 15 entre 2: 1
+10 + 15 //--> Suma
+10 - 15 //--> Resta
+10 * 15 //--> Multiplicación
+10 / 15 //--> División
+15++    //--> Incremento de uno en uno: 15 + 1
+15--    //--> Decremento de uno en uno: 15 - 1
+15 % 5  //--> Módulo. El resto obtenido de dividir 15 entre 5: 0
+15 % 2  //--> Módulo. El resto obtenido de dividir 15 entre 2: 1
 
 /* ==========================
 DE COMPARACIÓN SIMPLE
 ========================== */
 
-10 == 15 //---> Igualdad
-10 != 15 //---> Desigualdad
+10 == 15 //--> Igualdad
+10 != 15 //--> Desigualdad
 
 /* ==========================
 DE COMPARACIÓN ESTRICTA
 ========================== */
 
-10 === 15 //---> Estrictamente igual (mismo valor y tipo de dato)
-10 !== 15 //---> Compara si los operandos no son iguales y/o no del mismo tipo
+10 === 15 //--> Estrictamente igual (mismo valor y tipo de dato)
+10 !== 15 //--> Compara si los operandos no son iguales y/o no del mismo tipo
 
 /* ==========================
 OPERADORES RELACIONALES
 ========================== */
 
-15 > 10  //---> Mayor que...
-15 >= 10  //---> Mayor igual que...
-15 < 10  //---> Menor que...
-15 < 10  //---> Mayor igual que...
+15 > 10  //--> Mayor que...
+15 >= 10  //--> Mayor igual que...
+15 < 10  //--> Menor que...
+15 < 10  //--> Mayor igual que...
 
 /* ==========================
 LÓGICOS
@@ -223,7 +223,7 @@ LÓGICOS
 // Permiten combinar valores booleanos y su resultado a la vez también es un booleano
 
 // && Todos sus valores deben evaluar como TRUE
-(10 > 15) && (10 != 20) //---> 
+(10 > 15) && (10 != 20) //--> 
 
 
 </code></pre>
@@ -295,6 +295,186 @@ do {
 
 </code></pre>
 
+</fieldset>
+<h3>JSON, Callbacks, Intro a Asincronismo</h3>
+<fieldset>
+
+<legend>JSON</legend>
+<h5>Estructura del JSON</h5>
+<pre><code class="language-json">
+// Estructura json genérica
+
+{
+    "propiedad1" : "valor",
+    "propiedad2" : "valor"
+}
+
+// Ejemplo de estructura json simple
+
+{
+    "id": 1,
+    "nombre": "Luke",
+    "apellido": "Skywalker",
+    "edad": 19
+}
+
+
+// Ejemplo de estructura json más avanzada
+
+{
+    "provincias": [
+        {
+            "nombre": "Santiago del Estero",
+            "id": "86",
+            "centroide": {
+                "lat": -27.782412,
+                "lon": -63.252387
+            }
+        }
+    ],
+    "cantidad": 1,
+    "total": 1,
+    "inicio": 0,
+    "parametros": { ... }
+}
+
+// Array de elementos en formato json
+[
+    {
+        "id": 1,
+        "nombre": "Luke",
+        "apellido": "Skywalker",
+        "edad": 19,
+        "password": "$2y$10$Hd35v8se0MIYhdzyeiCXuej8T5j6yNmgWWJSWJowLgelMFvSiqevq"
+    },
+    {
+        "id": 2,
+        "nombre": "Leia",
+        "apellido": "Organa",
+        "edad": 19,
+        "password": "$2y$10$pMuPiJ3dOvFw4Jzbl4cpJu59QggCNdterkHjdYn2.ThIPtVKWuiHy"
+    }
+]    
+           
+</code></pre>
+
+<h5>Métodos de String</h5>
+<pre><code class="language-javascript">
+/* ==========================
+.length
+- Retorna la cantidad de caracteres de un string
+========================== */
+
+var serie = "Mad Men"
+serie.length; //--> Devuelve 7
+
+/* ==========================
+.indexOf()
+- Busca uno o más caracteres dentro del string al que le aplicamos el método
+========================== */
+
+var saludo = "¡Hola! Estamos programando";
+saludo.indexOf('Estamos') //--> Devuelve 7
+
+/*
+    ¡ -> 0
+    H -> 1
+    o -> 2
+    l -> 3
+    a -> 4
+    ! -> 5
+      -> 6
+    E -> 7
+    s -> 
+    
+    etc...
+*/
+
+// Si solo pasamos una letra, el valor de retorno será la primera coincidencia
+saludo.indexOf('o') //--> Devuelve 2.
+
+// Si no encuentra lo que pasemos por parametro, el valor de retorno sera -1
+saludo.indexOf('Asado') //--> Devuelve -1
+saludo.indexOf('9') //--> Devuelve -1
+saludo.indexOf('x') //--> Devuelve -1
+
+/* ==========================
+.slice()
+- Corta y devuelve una parte del string donde se aplica
+========================== */
+
+var frase = "Breaking Bad Rules!";
+
+frase.slice(9, 12) //--> Devuelve 'Bad'
+frase.slice(13) //--> Devuelve 'Rules'
+frase.slice(-10) //--> ¿Qué devuelve esto? Tarea para casa :)
+
+/* ==========================
+trim()
+- Elimina espacio al princio y final de un string
+- NO recorta los espacios intermedios
+========================== */
+
+var nombreCompleto = "        Homero Simpson     ";
+nombreCompleto.trim(); //--> Devuelve "Homero Simpson";
+
+/* ==========================
+split()
+- Separa un string en varios strings a través del caracter o caracteres que indiquemos
+========================== */
+
+var frase = "En una galaxia muy muy lejana";
+frase.split(' ') //--> Aclaramos que corte este string donde encuentre ' ' (espacios)
+// Devuelve entonces ['En', 'una', 'galaxia', 'muy', 'muy', 'lejana...'];
+
+/* ==========================
+replace()
+- Reemplaza una parte de un string por otra
+========================== */
+
+var otraFrase = 'Aguante Python!';
+frase.replace('Phyton', 'JS') //--> Devuelve 'Aguante JS!'
+frase.replace('Phy', 'JS') //--> Devuelve Aguante 'Aguante JSton!'
+
+</code></pre>
+
+</fieldset>
+
+<fieldset>
+<legend>Arrow function</legend>
+<h5>Estructura de Arrow Function</h5>
+
+<pre><code class="language-javascript">
+// Función convencional
+
+function sumar(n1, n2) {
+    return n1 + n2
+}
+
+// Arrow function
+
+let sumar = (n1, n2) => { n1 + n2 }
+
+</code></pre>
+
+
+</fieldset>
+
+<fieldset>
+<legend>Closures</legend>
+<h5>Ejemplo de Closure</h5>
+<pre><code class="language-javascript">
+function iniciar() {
+    var nombreClase = "JS 101";
+    function mostrarClase() {
+        alert(nombreClase);
+    }
+    mostrarClase();
+}
+
+iniciar();
+  
+</code></pre>
 </fieldset>
 
 
