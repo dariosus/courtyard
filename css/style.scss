@@ -53,40 +53,42 @@ FUENTES
 ESTILOS GENERALES
 ============================================ */
 
-h1, h2, h3, h4, h5, h6, .__h2, .__h3 {
-    font-family: 'Poppins';
-    color: $colorGeneral;
-}
-
-.__h2 {
-    font-weight: bold;
-    font-size: 22px!important;
-    margin: 19px 0!important;
-}
-
-.__h3 {
-    font-size: 18.5px!important;
-}
-
-p {
-    margin-bottom: 18px!important;
-}
-
-p, small, ul, li {
-    font-family: 'Source Sans Pro';
-    font-size: 16.5px!important;
-    line-height: 1.4em;
-    color: $colorGeneral
-}
-
-ul {
-    li {
-        margin-bottom: 5px;
+.courtyard {
+    h1, h2, h3, h4, h5, h6, .__h2, .__h3 {
+        font-family: 'Poppins';
+        color: $colorGeneral;
     }
-}
 
-[class^="__seccion"] {
-    margin-bottom: 20px;
+    .__h2 {
+        font-weight: bold;
+        font-size: 22px!important;
+        margin: 19px 0!important;
+    }
+    
+    .__h3 {
+        font-size: 18.5px!important;
+    }
+    
+    p {
+        margin-bottom: 18px!important;
+    }
+    
+    p, small, ul, li {
+        font-family: 'Source Sans Pro';
+        font-size: 16.5px!important;
+        line-height: 1.4em;
+        color: $colorGeneral
+    }
+    
+    ul {
+        li {
+            margin-bottom: 5px;
+        }
+    }
+    
+    [class^="__seccion"] {
+        margin-bottom: 20px;
+    }
 }
 
 /* ============================================
@@ -94,7 +96,7 @@ TITULOS CON EMOJI :)
 http://www.unicode.org/emoji/charts/full-emoji-list.html
 ============================================ */
 
-.__h2.__emoji {
+.courtyard .__h2.__emoji {
 
     &.__fire { @include emojiTitles('\1F525', $colorAlerta) }
     &.__movie-camera { @include emojiTitles('\1F3AC') }
@@ -117,7 +119,7 @@ SECCIÓN CÓDIGO
     - Bloque de código (.__wrapper-codigo)
 ============================================ */
 
-.__seccion-codigo {
+.courtyard .__seccion-codigo {
     .__wrapper-codigo {
         min-height: 50px;
         padding: 10px;
@@ -137,7 +139,7 @@ SECCIÓN TARJETAS PROFES
             - Mail <small>
 ============================================ */
 
-.__seccion-tarjetas {
+.courtyard .__seccion-tarjetas {
     .__wrapper-tarjeta {
         display: flex;
         align-items: center;
@@ -179,7 +181,7 @@ SECCIÓN TARJETAS PROFES
 }
 
 @media (max-width: 680px) {
-    .__seccion-tarjetas {
+    .courtyard .__seccion-tarjetas {
         .__wrapper-tarjeta {
             .__combo-texto {
                 p {
@@ -196,7 +198,7 @@ SECCIÓN LISTADO DE CHECKS
         - Items <li>
 ============================================ */
 
-.__seccion-check {
+.courtyard .__seccion-check {
     ul {
         padding-inline-start: 30px;
         list-style-type: none;
@@ -226,7 +228,7 @@ SECCIÓN DOS COLUMNAS
         - Párrafo <p>
 ============================================ */
 
-.__seccion-dos-columnas {
+.courtyard .__seccion-dos-columnas {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -254,7 +256,7 @@ SECCIÓN DOS COLUMNAS
 }
 
 @media (max-width: 700px) {
-    .__seccion-dos-columnas {
+    .courtyard > .__seccion-dos-columnas {
         .__columna {
             width: 100%;
         }
@@ -265,7 +267,7 @@ SECCIÓN DOS COLUMNAS
 QUOTES
 ============================================ */
 
-.__quote {
+.courtyard .__quote {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -287,7 +289,7 @@ QUOTES
 }
 
 @media (max-width: 550px) {
-    .__quote {
+    .courtyard .__quote {
         align-items: flex-start;
         flex-direction: column;
 
