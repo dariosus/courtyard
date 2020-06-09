@@ -16,6 +16,10 @@ FUENTES
 ESTILOS GENERALES
 ============================================ */
 .courtyard h1, .courtyard h2, .courtyard h3, .courtyard h4, .courtyard h5, .courtyard h6, .courtyard .__h2, .courtyard .__h3 {
+  -webkit-margin-before: 1em;
+          margin-block-start: 1em;
+  -webkit-margin-after: 0.3em;
+          margin-block-end: 0.3em;
   font-family: 'Poppins';
   color: #5a5a5a;
 }
@@ -23,15 +27,15 @@ ESTILOS GENERALES
 .courtyard .__h2 {
   font-weight: bold;
   font-size: 22px !important;
-  margin: 19px 0 !important;
+  /* margin: 19px 0!important; */
 }
 
 .courtyard .__h3 {
-  font-size: 18.5px !important;
+  /* font-size: 18.5px!important; */
 }
 
 .courtyard p {
-  margin-bottom: 18px !important;
+  margin: 0.3em 0 0.6em 0 !important;
 }
 
 .courtyard p, .courtyard small, .courtyard ul, .courtyard li {
@@ -186,6 +190,7 @@ SECCIÓN TARJETAS PROFES
   border-radius: 7px;
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
+  max-height: 200px;
 }
 
 .courtyard .__seccion-tarjetas .__wrapper-tarjeta + .__wrapper-tarjeta {
@@ -194,7 +199,7 @@ SECCIÓN TARJETAS PROFES
 
 .courtyard .__seccion-tarjetas .__wrapper-tarjeta img {
   border-radius: 7px 0 0 7px;
-  width: 30%;
+  max-height: 200px;
 }
 
 .courtyard .__seccion-tarjetas .__wrapper-tarjeta .__combo-texto {
@@ -214,13 +219,6 @@ SECCIÓN TARJETAS PROFES
 .courtyard .__seccion-tarjetas .__wrapper-tarjeta .__combo-texto small {
   font-size: 16px;
   justify-self: flex-end;
-}
-
-.courtyard .__seccion-tarjetas .__wrapper-tarjeta:hover {
-  -webkit-transform: translateY(-5px);
-          transform: translateY(-5px);
-  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.14), 0 6px 6px rgba(0, 0, 0, 0.18);
-          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.14), 0 6px 6px rgba(0, 0, 0, 0.18);
 }
 
 @media (max-width: 680px) {
@@ -315,12 +313,11 @@ QUOTES
       -ms-flex-pack: justify;
           justify-content: space-between;
   border-radius: 7px;
-  padding: 25px;
+  padding: 30px 40px;
   margin-bottom: 25px;
 }
 
 .courtyard .__quote p {
-  width: 85%;
   color: #fff;
   font-size: 16px;
   font-weight: 500;
@@ -334,12 +331,18 @@ QUOTES
   content: '';
   opacity: .5;
   display: block;
-  width: 15%;
-  min-height: 70px;
+  min-width: 60px;
+  min-height: 60px;
   margin-right: 25px;
   background-image: url("../img/icon-alert.svg");
-  background-position: center center;
+  background-position: left center;
   background-repeat: no-repeat;
+}
+
+@media (max-width: 550px) {
+  .courtyard .__quote.__alerta::before {
+    margin-bottom: 10px;
+  }
 }
 
 .courtyard .__quote.__ok {
@@ -350,12 +353,18 @@ QUOTES
   content: '';
   opacity: .5;
   display: block;
-  width: 15%;
-  min-height: 70px;
+  min-width: 60px;
+  min-height: 60px;
   margin-right: 25px;
   background-image: url("../img/icon-check.svg");
-  background-position: center center;
+  background-position: left center;
   background-repeat: no-repeat;
+}
+
+@media (max-width: 550px) {
+  .courtyard .__quote.__ok::before {
+    margin-bottom: 10px;
+  }
 }
 
 .courtyard .__quote.__cita {
@@ -366,12 +375,18 @@ QUOTES
   content: '';
   opacity: .5;
   display: block;
-  width: 15%;
-  min-height: 70px;
+  min-width: 60px;
+  min-height: 60px;
   margin-right: 25px;
   background-image: url("../img/icon-quotes.svg");
-  background-position: center center;
+  background-position: left center;
   background-repeat: no-repeat;
+}
+
+@media (max-width: 550px) {
+  .courtyard .__quote.__cita::before {
+    margin-bottom: 10px;
+  }
 }
 
 .courtyard .__quote.__info {
@@ -382,12 +397,18 @@ QUOTES
   content: '';
   opacity: .5;
   display: block;
-  width: 15%;
-  min-height: 70px;
+  min-width: 60px;
+  min-height: 60px;
   margin-right: 25px;
   background-image: url("../img/icon-info.svg");
-  background-position: center center;
+  background-position: left center;
   background-repeat: no-repeat;
+}
+
+@media (max-width: 550px) {
+  .courtyard .__quote.__info::before {
+    margin-bottom: 10px;
+  }
 }
 
 @media (max-width: 550px) {
@@ -401,7 +422,7 @@ QUOTES
             flex-direction: column;
   }
   .courtyard .__quote p {
-    margin-bottom: 0;
+    margin: 15px 0 5px 0 !important;
   }
 }
 /*# sourceMappingURL=style.css.map */
