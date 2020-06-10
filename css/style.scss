@@ -46,11 +46,11 @@ MIXINS
   
 /* ============================================
 FUENTES
-    - Titulos: Poppins
+    - Titulos: Rajdhani
     - Párrafos: Source Sans Pro
 ============================================ */
 
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&display=swap');
 
 /* ============================================
@@ -61,18 +61,13 @@ ESTILOS GENERALES
     h1, h2, h3, h4, h5, h6, .__h2, .__h3 {
         margin-block-start: 1em;
         margin-block-end: 0.3em;
-        font-family: 'Poppins';
+        font-family: 'Rajdhani', sans-serif;
         color: $colorGeneral;
     }
 
     .__h2 {
         font-weight: bold;
         font-size: 22px!important;
-        /* margin: 19px 0!important; */
-    }
-    
-    .__h3 {
-        /* font-size: 18.5px!important; */
     }
     
     p {

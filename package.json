@@ -1,0 +1,24 @@
+{
+  "name": "courtyard",
+  "version": "1.0.0",
+  "description": "Courtyard esta pensado como herramientas para el equipo académico para poder cargar contenido en playground con estilo y diseño.",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "scss --watch ./css/style.css:./css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dariosus/courtyard.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dariosus/courtyard/issues"
+  },
+  "homepage": "https://github.com/dariosus/courtyard#readme"
+}

@@ -7,31 +7,24 @@ MIXINS
 ============================================ */
 /* ============================================
 FUENTES
-    - Titulos: Poppins
+    - Titulos: Rajdhani
     - Párrafos: Source Sans Pro
 ============================================ */
-@import url("https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&display=swap");
 /* ============================================
 ESTILOS GENERALES
 ============================================ */
 .courtyard h1, .courtyard h2, .courtyard h3, .courtyard h4, .courtyard h5, .courtyard h6, .courtyard .__h2, .courtyard .__h3 {
-  -webkit-margin-before: 1em;
-          margin-block-start: 1em;
-  -webkit-margin-after: 0.3em;
-          margin-block-end: 0.3em;
-  font-family: 'Poppins';
+  margin-block-start: 1em;
+  margin-block-end: 0.3em;
+  font-family: 'Rajdhani', sans-serif;
   color: #5a5a5a;
 }
 
 .courtyard .__h2 {
   font-weight: bold;
   font-size: 22px !important;
-  /* margin: 19px 0!important; */
-}
-
-.courtyard .__h3 {
-  /* font-size: 18.5px!important; */
 }
 
 .courtyard p {
@@ -180,15 +173,10 @@ SECCIÓN TARJETAS PROFES
             - Mail <small>
 ============================================ */
 .courtyard .__seccion-tarjetas .__wrapper-tarjeta {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   border: 1px solid #E6E6E6;
   border-radius: 7px;
-  -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
   max-height: 200px;
 }
@@ -233,8 +221,7 @@ SECCIÓN LISTADO DE CHECKS
         - Items <li>
 ============================================ */
 .courtyard .__seccion-check ul {
-  -webkit-padding-start: 30px;
-          padding-inline-start: 30px;
+  padding-inline-start: 30px;
   list-style-type: none;
   position: relative;
 }
@@ -260,14 +247,9 @@ SECCIÓN DOS COLUMNAS
         - Párrafo <p>
 ============================================ */
 .courtyard .__seccion-dos-columnas {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .courtyard .__seccion-dos-columnas .__h2 {
@@ -303,15 +285,9 @@ SECCIÓN DOS COLUMNAS
 QUOTES
 ============================================ */
 .courtyard .__quote {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
   border-radius: 7px;
   padding: 30px 40px;
   margin-bottom: 25px;
@@ -413,13 +389,8 @@ QUOTES
 
 @media (max-width: 550px) {
   .courtyard .__quote {
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    align-items: flex-start;
+    flex-direction: column;
   }
   .courtyard .__quote p {
     margin: 15px 0 5px 0 !important;
