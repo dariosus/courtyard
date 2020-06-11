@@ -8,7 +8,7 @@ MIXINS
 /* ============================================
 FUENTES
     - Titulos: Rajdhani
-    - Párrafos: Open Sans
+    - P├írrafos: Open Sans
 ============================================ */
 @import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Rajdhani:wght@400;700&display=swap");
@@ -20,151 +20,98 @@ ESTILOS GENERALES
   margin-block-end: 0.3em;
   font-family: 'Rajdhani', sans-serif;
   color: #5a5a5a;
-}
-
-.courtyard .__h2 {
-  font-weight: bold;
-  font-size: 22px !important;
-}
-
+  font-weight: bold; }
+.courtyard h2, .courtyard .__h2 {
+  font-size: 24px !important; }
+.courtyard h3, .courtyard .__h3 {
+  font-size: 20px !important; }
 .courtyard p {
-  margin: 0.3em 0 0.6em 0 !important;
-}
-
+  margin: 0.3em 0 0.6em 0 !important; }
 .courtyard p, .courtyard small, .courtyard ul, .courtyard li {
   font-family: 'Open Sans';
-  font-size: 16.5px !important;
+  font-size: 15px !important;
   line-height: 1.4em;
-  color: #5a5a5a;
-}
-
+  color: #5a5a5a; }
 .courtyard ul li {
-  margin-bottom: 5px;
-}
-
+  margin-bottom: 5px; }
 .courtyard [class^="__seccion"] {
-  margin-bottom: 20px;
-}
+  margin-bottom: 20px; }
 
 /* ============================================
 TITULOS CON EMOJI :)
 http://www.unicode.org/emoji/charts/full-emoji-list.html
 ============================================ */
 .courtyard .__h2.__emoji.__fire {
-  color: orange;
-}
-
-.courtyard .__h2.__emoji.__fire::before {
-  margin-right: 5px;
-  content: "🔥";
-}
-
+  color: orange; }
+  .courtyard .__h2.__emoji.__fire::before {
+    margin-right: 5px;
+    content: "🔥"; }
 .courtyard .__h2.__emoji.__movie-camera {
-  color: #5a5a5a;
-}
-
-.courtyard .__h2.__emoji.__movie-camera::before {
-  margin-right: 5px;
-  content: "🎬";
-}
-
+  color: #5a5a5a; }
+  .courtyard .__h2.__emoji.__movie-camera::before {
+    margin-right: 5px;
+    content: "🎬"; }
 .courtyard .__h2.__emoji.__rocket {
-  color: #5a5a5a;
-}
-
-.courtyard .__h2.__emoji.__rocket::before {
-  margin-right: 5px;
-  content: "🚀";
-}
-
+  color: #5a5a5a; }
+  .courtyard .__h2.__emoji.__rocket::before {
+    margin-right: 5px;
+    content: "🚀"; }
 .courtyard .__h2.__emoji.__pushpin {
-  color: #5a5a5a;
-}
-
-.courtyard .__h2.__emoji.__pushpin::before {
-  margin-right: 5px;
-  content: "📌";
-}
-
+  color: #5a5a5a; }
+  .courtyard .__h2.__emoji.__pushpin::before {
+    margin-right: 5px;
+    content: "📌"; }
 .courtyard .__h2.__emoji.__clapper-board {
-  color: #5a5a5a;
-}
-
-.courtyard .__h2.__emoji.__clapper-board::before {
-  margin-right: 5px;
-  content: "🎬";
-}
-
+  color: #5a5a5a; }
+  .courtyard .__h2.__emoji.__clapper-board::before {
+    margin-right: 5px;
+    content: "🎬"; }
 .courtyard .__h2.__emoji.__laptop {
-  color: #5a5a5a;
-}
-
-.courtyard .__h2.__emoji.__laptop::before {
-  margin-right: 5px;
-  content: "💻";
-}
-
+  color: #5a5a5a; }
+  .courtyard .__h2.__emoji.__laptop::before {
+    margin-right: 5px;
+    content: "💻"; }
 .courtyard .__h2.__emoji.__light-bulb {
-  color: #5a5a5a;
-}
-
-.courtyard .__h2.__emoji.__light-bulb::before {
-  margin-right: 5px;
-  content: "💡";
-}
-
+  color: #5a5a5a; }
+  .courtyard .__h2.__emoji.__light-bulb::before {
+    margin-right: 5px;
+    content: "💡"; }
 .courtyard .__h2.__emoji.__compass {
-  color: #5a5a5a;
-}
-
-.courtyard .__h2.__emoji.__compass::before {
-  margin-right: 5px;
-  content: "🧭";
-}
-
+  color: #5a5a5a; }
+  .courtyard .__h2.__emoji.__compass::before {
+    margin-right: 5px;
+    content: "🧭"; }
 .courtyard .__h2.__emoji.__last-track-button {
-  color: #5a5a5a;
-}
-
-.courtyard .__h2.__emoji.__last-track-button::before {
-  margin-right: 5px;
-  content: "⏮";
-}
-
+  color: #5a5a5a; }
+  .courtyard .__h2.__emoji.__last-track-button::before {
+    margin-right: 5px;
+    content: "⏮"; }
 .courtyard .__h2.__emoji.__thinking-face {
-  color: #5a5a5a;
-}
-
-.courtyard .__h2.__emoji.__thinking-face::before {
-  margin-right: 5px;
-  content: "🤔";
-}
-
+  color: #5a5a5a; }
+  .courtyard .__h2.__emoji.__thinking-face::before {
+    margin-right: 5px;
+    content: "🤔"; }
 .courtyard .__h2.__emoji.__thumbs-up {
-  color: #5a5a5a;
-}
-
-.courtyard .__h2.__emoji.__thumbs-up::before {
-  margin-right: 5px;
-  content: "👍";
-}
+  color: #5a5a5a; }
+  .courtyard .__h2.__emoji.__thumbs-up::before {
+    margin-right: 5px;
+    content: "👍"; }
 
 /* ============================================
-SECCIÓN CÓDIGO
+SECCI├ôN C├ôDIGO
     - Titulo <h2>
-    - Párrafo <p>
-    - Bloque de código (.__wrapper-codigo)
+    - P├írrafo <p>
+    - Bloque de c├│digo (.__wrapper-codigo)
 ============================================ */
 .courtyard .__seccion-codigo .__wrapper-codigo {
   min-height: 50px;
   padding: 10px;
   border-radius: 7px;
   background: #282c34;
-  font-size: 14px;
-}
+  font-size: 14px; }
 
 /* ============================================
-SECCIÓN TARJETAS PROFES
+SECCI├ôN TARJETAS PROFES
     - Wrapper de tarjeta individual (.)
         - Imagen profe <img>
         - Combo de texto (.__combo-texto)
@@ -178,109 +125,74 @@ SECCIÓN TARJETAS PROFES
   border: 1px solid #E6E6E6;
   border-radius: 7px;
   transition: all 0.25s ease-in-out;
-  max-height: 200px;
-}
-
-.courtyard .__seccion-tarjetas .__wrapper-tarjeta + .__wrapper-tarjeta {
-  margin-top: 25px;
-}
-
-.courtyard .__seccion-tarjetas .__wrapper-tarjeta img {
-  border-radius: 7px 0 0 7px;
-  max-height: 200px;
-}
-
-.courtyard .__seccion-tarjetas .__wrapper-tarjeta .__combo-texto {
-  width: 70%;
-  padding: 20px 30px;
-}
-
-.courtyard .__seccion-tarjetas .__wrapper-tarjeta .__combo-texto .__h3 {
-  font-weight: normal;
-  margin-top: 0;
-}
-
-.courtyard .__seccion-tarjetas .__wrapper-tarjeta .__combo-texto p {
-  font-size: 16px;
-}
-
-.courtyard .__seccion-tarjetas .__wrapper-tarjeta .__combo-texto small {
-  font-size: 16px;
-  justify-self: flex-end;
-}
+  max-height: 200px; }
+  .courtyard .__seccion-tarjetas .__wrapper-tarjeta + .__wrapper-tarjeta {
+    margin-top: 25px; }
+  .courtyard .__seccion-tarjetas .__wrapper-tarjeta img {
+    border-radius: 7px 0 0 7px;
+    max-height: 200px; }
+  .courtyard .__seccion-tarjetas .__wrapper-tarjeta .__combo-texto {
+    width: 70%;
+    padding: 20px 30px; }
+    .courtyard .__seccion-tarjetas .__wrapper-tarjeta .__combo-texto .__h3 {
+      margin-top: 0; }
+    .courtyard .__seccion-tarjetas .__wrapper-tarjeta .__combo-texto p {
+      font-size: 16px; }
+    .courtyard .__seccion-tarjetas .__wrapper-tarjeta .__combo-texto small {
+      font-size: 16px;
+      justify-self: flex-end; }
 
 @media (max-width: 680px) {
   .courtyard .__seccion-tarjetas .__wrapper-tarjeta .__combo-texto p {
-    display: none !important;
-  }
-}
-
+    display: none !important; } }
 /* ============================================
-SECCIÓN LISTADO DE CHECKS
+SECCI├ôN LISTADO DE CHECKS
     - Lista desordenada <ul>
         - Items <li>
 ============================================ */
 .courtyard .__seccion-check ul {
   padding-inline-start: 30px;
   list-style-type: none;
-  position: relative;
-}
-
-.courtyard .__seccion-check ul li::before {
-  content: '';
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  margin-top: -1px;
-  left: 0;
-  background-image: url("../img/checkmark-outline.svg");
-  background-size: 100%;
-}
+  position: relative; }
+  .courtyard .__seccion-check ul li::before {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    margin-top: -1px;
+    left: 0;
+    background-image: url("../img/checkmark-outline.svg");
+    background-size: 100%; }
 
 /* ============================================
-SECCIÓN DOS COLUMNAS
+SECCI├ôN DOS COLUMNAS
     - Columna izquierda <div>
-        - Título <h3>
-        - Párrafo <p>
+        - T├¡tulo <h3>
+        - P├írrafo <p>
     - Columna derecha <div>
-        - Título <h3>
-        - Párrafo <p>
+        - T├¡tulo <h3>
+        - P├írrafo <p>
 ============================================ */
 .courtyard .__seccion-dos-columnas {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.courtyard .__seccion-dos-columnas .__h2 {
-  display: block;
-  width: 100%;
-}
-
-.courtyard .__seccion-dos-columnas .__d-block-100 {
-  display: block;
-  width: 100%;
-}
-
-.courtyard .__seccion-dos-columnas .__columna {
-  width: 47%;
-}
-
-.courtyard .__seccion-dos-columnas .__columna .__h3 {
-  font-weight: normal;
-  margin: 0;
-}
-
-.courtyard .__seccion-dos-columnas .__columna p {
-  margin-top: 8px;
-}
+  justify-content: space-between; }
+  .courtyard .__seccion-dos-columnas .__h2 {
+    display: block;
+    width: 100%; }
+  .courtyard .__seccion-dos-columnas .__d-block-100 {
+    display: block;
+    width: 100%; }
+  .courtyard .__seccion-dos-columnas .__columna {
+    width: 47%; }
+    .courtyard .__seccion-dos-columnas .__columna .__h3 {
+      margin: 0; }
+    .courtyard .__seccion-dos-columnas .__columna p {
+      margin-top: 8px; }
 
 @media (max-width: 700px) {
   .courtyard > .__seccion-dos-columnas .__columna {
-    width: 100%;
-  }
-}
-
+    width: 100%; } }
 /* ============================================
 QUOTES
 ============================================ */
@@ -290,110 +202,77 @@ QUOTES
   justify-content: space-between;
   border-radius: 7px;
   padding: 30px 40px;
-  margin-bottom: 25px;
-}
-
-.courtyard .__quote p {
-  color: #fff;
-  font-size: 16px;
-  font-weight: 500;
-}
-
-.courtyard .__quote.__alerta {
-  background-color: red;
-}
-
-.courtyard .__quote.__alerta::before {
-  content: '';
-  opacity: .5;
-  display: block;
-  min-width: 60px;
-  min-height: 60px;
-  margin-right: 25px;
-  background-image: url("../img/icon-alert.svg");
-  background-position: left center;
-  background-repeat: no-repeat;
-}
-
-@media (max-width: 550px) {
-  .courtyard .__quote.__alerta::before {
-    margin-bottom: 10px;
-  }
-}
-
-.courtyard .__quote.__ok {
-  background-color: green;
-}
-
-.courtyard .__quote.__ok::before {
-  content: '';
-  opacity: .5;
-  display: block;
-  min-width: 60px;
-  min-height: 60px;
-  margin-right: 25px;
-  background-image: url("../img/icon-check.svg");
-  background-position: left center;
-  background-repeat: no-repeat;
-}
-
-@media (max-width: 550px) {
-  .courtyard .__quote.__ok::before {
-    margin-bottom: 10px;
-  }
-}
-
-.courtyard .__quote.__cita {
-  background-color: blueviolet;
-}
-
-.courtyard .__quote.__cita::before {
-  content: '';
-  opacity: .5;
-  display: block;
-  min-width: 60px;
-  min-height: 60px;
-  margin-right: 25px;
-  background-image: url("../img/icon-quotes.svg");
-  background-position: left center;
-  background-repeat: no-repeat;
-}
-
-@media (max-width: 550px) {
-  .courtyard .__quote.__cita::before {
-    margin-bottom: 10px;
-  }
-}
-
-.courtyard .__quote.__info {
-  background-color: blue;
-}
-
-.courtyard .__quote.__info::before {
-  content: '';
-  opacity: .5;
-  display: block;
-  min-width: 60px;
-  min-height: 60px;
-  margin-right: 25px;
-  background-image: url("../img/icon-info.svg");
-  background-position: left center;
-  background-repeat: no-repeat;
-}
-
-@media (max-width: 550px) {
-  .courtyard .__quote.__info::before {
-    margin-bottom: 10px;
-  }
-}
+  margin-bottom: 25px; }
+  .courtyard .__quote p {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500; }
+  .courtyard .__quote.__alerta {
+    background-color: red; }
+    .courtyard .__quote.__alerta::before {
+      content: '';
+      opacity: .5;
+      display: block;
+      min-width: 60px;
+      min-height: 60px;
+      margin-right: 25px;
+      background-image: url("../img/icon-alert.svg");
+      background-position: left center;
+      background-repeat: no-repeat; }
+    @media (max-width: 550px) {
+      .courtyard .__quote.__alerta::before {
+        margin-bottom: 10px; } }
+  .courtyard .__quote.__ok {
+    background-color: green; }
+    .courtyard .__quote.__ok::before {
+      content: '';
+      opacity: .5;
+      display: block;
+      min-width: 60px;
+      min-height: 60px;
+      margin-right: 25px;
+      background-image: url("../img/icon-check.svg");
+      background-position: left center;
+      background-repeat: no-repeat; }
+    @media (max-width: 550px) {
+      .courtyard .__quote.__ok::before {
+        margin-bottom: 10px; } }
+  .courtyard .__quote.__cita {
+    background-color: blueviolet; }
+    .courtyard .__quote.__cita::before {
+      content: '';
+      opacity: .5;
+      display: block;
+      min-width: 60px;
+      min-height: 60px;
+      margin-right: 25px;
+      background-image: url("../img/icon-quotes.svg");
+      background-position: left center;
+      background-repeat: no-repeat; }
+    @media (max-width: 550px) {
+      .courtyard .__quote.__cita::before {
+        margin-bottom: 10px; } }
+  .courtyard .__quote.__info {
+    background-color: blue; }
+    .courtyard .__quote.__info::before {
+      content: '';
+      opacity: .5;
+      display: block;
+      min-width: 60px;
+      min-height: 60px;
+      margin-right: 25px;
+      background-image: url("../img/icon-info.svg");
+      background-position: left center;
+      background-repeat: no-repeat; }
+    @media (max-width: 550px) {
+      .courtyard .__quote.__info::before {
+        margin-bottom: 10px; } }
 
 @media (max-width: 550px) {
   .courtyard .__quote {
     align-items: flex-start;
-    flex-direction: column;
-  }
-  .courtyard .__quote p {
-    margin: 15px 0 5px 0 !important;
-  }
-}
+    flex-direction: column; }
+    .courtyard .__quote p {
+      margin: 15px 0 5px 0 !important; } }
+
 /*# sourceMappingURL=style.css.map */

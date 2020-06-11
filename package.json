@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "scss --watch ./css/style.css:./css/style.css"
+    "watch": "scss --watch ./css/style.scss:./css/style.css"
   },
   "repository": {
     "type": "git",
